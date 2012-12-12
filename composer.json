@@ -5,12 +5,11 @@
     "keywords": ["cms", "rabbit", "rabbitcms", "php", "fast"],
     "homepage": "https://github.com/rabbit-project",
      "require-dev": {
-        "doctrine/common": ">=2.1",
         "phpunit/PHPUnit": "3.7.*"
     },
     "require": {
     	"php": ">=5.3.3",
-        "rabbit-project/rabbit": "1.0-dev"
+        "rabbit-project/rabbit": "dev-develop"
     },
     "authors": [
         {
