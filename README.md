@@ -20,20 +20,16 @@ Instalação do composer:
 
 Caso não venha com o composer.phar para instalar segue informação abaixo:
 
-Acessar a pasta do projeto "rabbit"
-
 Linux:
-$ curl -s https://getcomposer.org/installer | php
+ - $ curl -s https://getcomposer.org/installer | php
 
 Windows:
-php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
+ - php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
 
-Depois executar o comando:
+Atualize o composer:
+ - $ php composer.phar self-update
 
-Atualizar o composer:
-$ php composer.phar self-update
+Instalar o CMS Rabbit:
+ - $ php composer.phar create-project rabbit-project/rabbit-cms nomedasuapasta versaox
 
-Instalando as dependencias do rabbit:
-$ php composer.phar create-project rabbit-project/rabbit-cms suapasta versaox
-
-Pronto feito isso só acessar o projeto "localhost/suapasta"
+Pronto feito isso só acessar o projeto "localhost/nomedasuapasta"
