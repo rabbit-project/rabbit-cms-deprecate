@@ -34,6 +34,6 @@ Atualizar o composer:
 $ php composer.phar self-update
 
 Instalando as dependencias do rabbit:
-$ php composer.phar install
+$ php composer.phar create-project rabbit-project/rabbit-cms suapasta versaox
 
-Pronto feito isso só acessar o projeto "localhost/rabbitcms"
+Pronto feito isso só acessar o projeto "localhost/suapasta"
