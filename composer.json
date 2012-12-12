@@ -1,0 +1,27 @@
+{
+    "name": "rabbit-project/rabbit-cms",
+    "type": "library",
+    "description": "O Rabbit é um conjunto de código baseado em PHP - Framework simples para controlar a arquitetura HMVC, utilizar como ORM Doctrine",
+    "keywords": ["cms", "rabbit", "rabbitcms", "php", "fast"],
+    "homepage": "https://github.com/rabbit-project",
+     "require-dev": {
+        "doctrine/common": ">=2.1",
+        "phpunit/PHPUnit": "3.7.*"
+    },
+    "require": {
+    	"php": ">=5.3.3",
+        "rabbit-project/rabbit": "1.0-dev"
+    },
+    "authors": [
+        {
+            "name": "Erick Leao",
+            "email": "erickleao@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

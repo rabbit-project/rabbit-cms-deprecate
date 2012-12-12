@@ -1,0 +1,16 @@
+Application\Main\Default:
+ type: Rabbit\Routing\Mapping\Literal
+ url: /
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index
+Application\Main\Default2:
+ type: Rabbit\Routing\Mapping\Literal
+ url: /type/arquivo/:_format
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index
