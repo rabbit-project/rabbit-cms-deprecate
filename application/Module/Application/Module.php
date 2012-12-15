@@ -24,7 +24,14 @@ class Module {
 			"services" => array(
 				"Application\Rabbit\Index" => function () {
 					return new \Application\Main\Controller\IndexController(new Request(), new Response());
-				}
+				},
+				"Application\Rabbit\Index2" => array(
+					"fn" => function () {
+						echo "Entro";
+						return new \Application\Main\Controller\IndexController(new Request(), new Response());
+					},
+					"unique" => true
+				)
 			)
 		);
 	}

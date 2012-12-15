@@ -7,9 +7,7 @@ $load = include 'vendor/autoload.php';
 $load->add("Rabbit", realpath("vendor/rabbit/library"));
 
 // Registrando o Servico do Load
-Rabbit\ServiceLocator::register("Rabbit\Load",function($arg) {
-	return $arg;
-}, array($load));
+Rabbit\Service\ServiceLocator::registerInstance("Rabbit\Load", $load);
 
 // Cofnigurando Paths
 define("DS", DIRECTORY_SEPARATOR);

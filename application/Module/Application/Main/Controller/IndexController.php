@@ -3,13 +3,13 @@ namespace Application\Main\Controller;
 
 use Rabbit\Application;
 
-use Rabbit\View;
+use Rabbit\View\View;
 use Rabbit\Controller\AbstractController;
 
 class IndexController extends AbstractController {
 	
 	public function indexAction(){
-		return new View(array("teste"=>"joao"));
+		return new View();
 	}
 	
 }

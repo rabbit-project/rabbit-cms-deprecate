@@ -1,12 +1,11 @@
 <?php
-
 chdir(dirname(__DIR__));
 
 require_once 'init.php';
 
 try {
 	
-	Rabbit\Application::getInstance()->run();
+	Rabbit\Application\Front::getInstance()->run();
 	
 } catch (Exception $e) {
 	echo "<h1>ERROR 500</h1>";
