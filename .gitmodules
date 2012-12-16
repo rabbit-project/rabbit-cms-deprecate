@@ -1,3 +1,0 @@
-[submodule "vendor/rabbit-project/rabbit"]
-	path = vendor/rabbit-project/rabbit
-	url = git@github.com:rabbit-project/rabbit.git
