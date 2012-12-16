@@ -1,7 +1,7 @@
 {
     "name": "rabbit-project/rabbit-cms",
     "type": "library",
-    "description": "O Rabbit é um conjunto de código baseado em PHP - Framework simples para controlar a arquitetura HMVC, utilizar como ORM Doctrine",
+    "description": "O Rabbit CMS é um sistema para auxiliar a criação de sistemas/portais, traz para os desenvolvedores agilidade focando somente no problema do cliente.",
     "keywords": ["cms", "rabbit", "rabbitcms", "php", "fast"],
     "homepage": "https://github.com/rabbit-project",
      "require-dev": {

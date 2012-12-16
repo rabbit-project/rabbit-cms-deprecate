@@ -1,4 +1,6 @@
 <?php
+use Rabbit\Service\ServiceLocator;
+
 chdir(dirname(__DIR__));
 
 require_once 'init.php';

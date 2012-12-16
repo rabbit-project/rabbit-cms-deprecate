@@ -1,25 +1,3 @@
 Index PHTML IndexController
-<script>
-	// construtor
-	var obj = function ($arg) { this.init($arg); }
-	
-	obj.prototype = {
-		// propriedades
-		var1: null,
-
-		// metodo
-		init: function ($arg) {
-			if($arg && $arg.var1)
-				this.var1 = $arg.var1;
-		},
-		
-		// metodo
-		getVar1: function () {
-			return this.var1;
-		}
-		
-	};
-
-	objI = new obj({"var1": "Gilmar"});
-	alert(objI.getVar1());
-</script>
+<br />
+<?= $this->nome;?>

@@ -8,7 +8,7 @@ Application\Main\Default:
   action: index
 Application\Main\Default2:
  type: Rabbit\Routing\Mapping\Literal
- url: /type/arquivo/:_format
+ url: /type/arquivo.:_format
  defaults:
   module: application
   namespace: main
