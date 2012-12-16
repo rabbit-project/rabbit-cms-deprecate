@@ -1,5 +1,5 @@
 <?php
-namespace Application\Tests;
+namespace Application\Tests\Main;
 
 use Symfony\Component\HttpFoundation\Request;
 
