@@ -2,7 +2,6 @@
 namespace Application\Main\Controller;
 
 use Rabbit\Application;
-
 use Rabbit\View\View;
 use Rabbit\Controller\AbstractController;
 
