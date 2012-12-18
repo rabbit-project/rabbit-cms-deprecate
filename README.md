@@ -1,4 +1,4 @@
-RabbitCMS
+RabbitCMS [![Build Status](https://travis-ci.org/rabbit-project/rabbit-cms.png?branch=develop)](https://travis-ci.org/rabbit-project/rabbit-cms)
 ======
 
 RabbitCMS é um sistema para auxiliar a criação de sistemas/portais, traz para os desenvolvedores agilidade focando somente no problema do cliente.
