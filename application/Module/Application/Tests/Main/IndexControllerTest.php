@@ -5,7 +5,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class IndexControllerTest extends \PHPUnit_Framework_TestCase {
 		
-	public function testExempleIsEmpty() {
+	public function testExampleIsEmpty() {
 		$this->assertEmpty("");
 	}
 	

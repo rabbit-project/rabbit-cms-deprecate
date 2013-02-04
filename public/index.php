@@ -1,9 +1,14 @@
 <?php
-use Rabbit\Service\ServiceLocator;
-
+use Rabbit\Reflection\ReflectionUtil;
 chdir(dirname(__DIR__));
 
+
 require_once 'init.php';
+
+
+
+use RabbitTest\Annotation\MyAnnotation;
+
 
 try {
 	

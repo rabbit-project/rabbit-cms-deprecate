@@ -8,7 +8,12 @@ use Rabbit\Controller\AbstractController;
 class IndexController extends AbstractController {
 	
 	public function indexAction(){
-		return new View(array("nome"=>"Erick"), array(
+		$arr = array("grupos"=>array(
+			array("nome"=>"Editor"),
+			array("nome"=>"Administrador"),
+		));
+		
+		return new View($arr, array(
 			"accepts" => array("xml","json","html","rss")
 		));
 	}

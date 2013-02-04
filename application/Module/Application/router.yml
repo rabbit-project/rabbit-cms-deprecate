@@ -1,16 +1,36 @@
 Application\Main\Default:
- type: Rabbit\Routing\Mapping\Literal
  url: /
  defaults:
   module: application
   namespace: main
   controller: index
   action: index
+ restfull: true
+# -------
 Application\Main\Default2:
- type: Rabbit\Routing\Mapping\Literal
  url: /type/arquivo.:_format
  defaults:
   module: application
   namespace: main
   controller: index
   action: index
+# -------
+Application\Main\Default3:
+ url: /teste #[/:action[/:teste]]/*
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index
+ requirements:
+  action: \d+
+# -------
+Application\Main\Default4:
+ url: /teste/:teste
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index
+ requirements:
+  teste: '[a-z]'
