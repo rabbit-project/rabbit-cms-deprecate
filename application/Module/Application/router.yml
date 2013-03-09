@@ -1,32 +1,41 @@
 Application\Main\Default:
- url: /
+ url: '/'
  defaults:
   module: application
   namespace: main
   controller: index
   action: index
- restfull: true
+# -------
+Application\Main\Default6:
+ url: '/:controller[/:action]'
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index
 # -------
 Application\Main\Default2:
- url: /type/arquivo.:_format
- defaults:
-  module: application
-  namespace: main
-  controller: index
-  action: index
-# -------
-Application\Main\Default3:
- url: /teste #[/:action[/:teste]]/*
+ url: '/type/arquivo.:_format.:id_:teste1-:teste2/:teste3'
  defaults:
   module: application
   namespace: main
   controller: index
   action: index
  requirements:
-  action: \d+
+  id: "\d"
+# -------
+Application\Main\Default3:
+ url: '/teste/:action/:teste[/*]'
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index
+ requirements:
+  action: '[a-z]'
 # -------
 Application\Main\Default4:
- url: /teste/:teste
+ url: '/teste/:teste'
  defaults:
   module: application
   namespace: main
@@ -34,3 +43,12 @@ Application\Main\Default4:
   action: index
  requirements:
   teste: '[a-z]'
+# -------
+Application\Main\Teste:
+ url: '/myteste'
+ defaults:
+  module: application
+  namespace: main
+  controller: teste
+  action: index
+# -------

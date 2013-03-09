@@ -20,7 +20,8 @@ class Module {
 					},
 					"unique" => true
 				)
-			)
+			),
+			"plugins" => array('Application\Plugin\MyPlugin'),
 		);
 	}
 	

@@ -1,17 +1,14 @@
 <?php
-use Rabbit\Reflection\ReflectionUtil;
-chdir(dirname(__DIR__));
+use Rabbit\Logger\LoggerType;
 
+use Rabbit\Logger\LoggerManager;
+
+chdir(dirname(__DIR__));
 
 require_once 'init.php';
 
-
-
-use RabbitTest\Annotation\MyAnnotation;
-
-
 try {
-	
+
 	Rabbit\Application\Front::getInstance()->run();
 	
 } catch (Exception $e) {
