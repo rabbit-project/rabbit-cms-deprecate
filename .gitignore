@@ -6,6 +6,7 @@
 composer.lock
 composer.phar
 autoload.php
-vendor
 !vendor/rabbit-project
+!vendor/rabbit-project/*
+vendor
 /nbproject/private/

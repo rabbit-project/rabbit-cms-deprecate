@@ -17,7 +17,7 @@ class TesteController extends AbstractController {
 	private $myObjeto;
 	
 	public function indexAction() {
-				
+		print_pre($this->myObjeto);
 		return new View(array("usuario"=>$this->myObjeto));
 	}
 	
