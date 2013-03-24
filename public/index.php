@@ -12,7 +12,7 @@ try {
 	Rabbit\Application\Front::getInstance()->run();
 	
 } catch (Exception $e) {
-	echo "<h1>ERROR 500</h1>";
+	echo "<h1>ERROR</h1>";
 	echo "Error codigo: <strong>{$e->getCode()}</strong><br />";
 	echo "Mensagem: {$e->getMessage()}<br />";
 	echo "Printstack:<pre>{$e->getTraceAsString()}</pre>";

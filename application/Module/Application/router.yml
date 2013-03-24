@@ -1,4 +1,4 @@
-Application\Main\Default:
+Application\Main\Literal:
  url: '/'
  defaults:
   module: application
@@ -6,49 +6,59 @@ Application\Main\Default:
   controller: index
   action: index
 # -------
-Application\Main\Default6:
- url: '/:controller[/:action]'
+Application\Main\Literal2:
+ url: '/teste'
  defaults:
   module: application
   namespace: main
   controller: index
-  action: index
+  action: indexa
 # -------
-Application\Main\Default2:
- url: '/type/arquivo.:_format.:id_:teste1-:teste2/:teste3'
+Application\Main\Regex:
+ type: 'Rabbit\Routing\Mapping\Regex'
+ url: '/(?<controller>[^/]+)/'
  defaults:
   module: application
   namespace: main
   controller: index
-  action: index
- requirements:
-  id: "\d"
+  action: teste
+ options:
+  matches_ref:
+   id: 2
 # -------
-Application\Main\Default3:
- url: '/teste/:action/:teste[/*]'
+Application\Main\Segment:
+ type: 'Rabbit\Routing\Mapping\Segment'
+ url: '/segment/:usuario'
  defaults:
   module: application
   namespace: main
   controller: index
-  action: index
- requirements:
-  action: '[a-z]'
+  action: teste
+ options:
+  requirements:
+   usuario: '[a-z]'
 # -------
-Application\Main\Default4:
- url: '/teste/:teste'
+Application\Main\Segment2:
+ type: 'Rabbit\Routing\Mapping\Segment'
+ url: '/segment2[/:usuario[/*]]'
  defaults:
   module: application
   namespace: main
   controller: index
-  action: index
- requirements:
-  teste: '[a-z]'
+  action: teste2
+ options:
+  requirements:
+   usuario: '[a-z]'
 # -------
-Application\Main\Teste:
- url: '/myteste'
+Application\Main\Segment3:
+ type: 'Rabbit\Routing\Mapping\Segment'
+ url: '/:controller[/:action[/:teste[/*]]]'
  defaults:
   module: application
   namespace: main
-  controller: teste
-  action: index
+  controller: index
+  action: teste2
+ options:
+  requirements:
+   action: '[a-z]'
 # -------

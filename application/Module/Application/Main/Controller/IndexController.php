@@ -19,20 +19,24 @@ class IndexController extends AbstractController {
 			array("nome"=>"Administrador"),
 		));
 		
-		try{
+		/*try{
 			throw new \Exception("Teste");
 		}catch (\Exception $e){
 			LoggerManager::getInstance()->getLogger(get_class())->log("Index Error", LoggerType::get("DEBUG"), $e);
-		}
+		}*/
 		
 		return new View($arr, array(
-			"accepts" => array("xml","json","html","rss")
+			"accepts" => array("xml","json","html")
 		));
 	}
 	
 	public function myFormAction() {
 		print_pre($this->usuario);
 		return new View(array("usuario"=>$this->usuario));
+	}
+	
+	public function testeAction() {
+		return new View(array("nome"=>"Erick", "grupo"=>"Administrador")); 
 	}
 	
 }

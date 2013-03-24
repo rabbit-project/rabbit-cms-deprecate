@@ -20,7 +20,11 @@ define("RABBIT_PATH_MODULE", RABBIT_PATH_APPLICATION . DS . "Module");
  * Função de auxilio
  */ 
 function print_pre($var) {
-	echo "<pre>";
-	print_r($var);
-	echo "</pre>";
+	echo "<pre><code>";
+	if(is_string($var)){
+		echo htmlentities($var);
+	}else{
+		print_r($var);
+	}
+	echo "</code></pre>";
 };
