@@ -1,15 +1,10 @@
 <?php
 namespace Application\Main\Controller;
 
-use Application\Main\Vo\UsuarioVo;
-
-use Rabbit\Logger\LoggerType;
-
-use Rabbit\Logger\LoggerManager;
-
 use Rabbit\Application;
-use Rabbit\View\View;
 use Rabbit\Controller\AbstractController;
+use Rabbit\Logger\LoggerManager;
+use Rabbit\View\View;
 
 class IndexController extends AbstractController {
 	
@@ -24,19 +19,19 @@ class IndexController extends AbstractController {
 		}catch (\Exception $e){
 			LoggerManager::getInstance()->getLogger(get_class())->log("Index Error", LoggerType::get("DEBUG"), $e);
 		}*/
-		
-		return new View($arr, array(
-			"accepts" => array("xml","json","html")
-		));
+
+		return View::render($arr);
 	}
 	
 	public function myFormAction() {
 		print_pre($this->usuario);
-		return new View(array("usuario"=>$this->usuario));
+		return View::render(array('usuario'=>$this->usuario));
 	}
 	
 	public function testeAction() {
-		return new View(array("nome"=>"Erick", "grupo"=>"Administrador")); 
+		return View::render(array('nome'=>'erick','grupo'=>'Administrador'), array(
+			'accepts' => array('xml','html','json')
+		));
 	}
 	
 }

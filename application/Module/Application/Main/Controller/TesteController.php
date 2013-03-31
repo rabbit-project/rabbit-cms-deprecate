@@ -11,17 +11,15 @@ use Rabbit\Controller\AbstractController;
 
 class TesteController extends AbstractController {
 	
-	/**
-	 * @var UsuarioVo
-	 */
+	/** @var UsuarioVo */
 	private $myObjeto;
 	
 	public function indexAction() {
-		return new View(array("usuario"=>$this->myObjeto));
+		return View::render(array("usuario"=>$this->myObjeto));
 	}
 	
 	public function resultAction() {
-		return new View(array("usuario"=>$this->myObjeto));
+		return View::render(array("usuario"=>$this->myObjeto));
 	}
 	
 	public function getMyObjeto() {

@@ -3,11 +3,12 @@
 if (!file_exists('vendor/autoload.php'))
 	throw new RuntimeException('Necessário a instalação do "composer"');
 
+/** @var $load \Composer\Autoload\ClassLoader */
 $load = include 'vendor/autoload.php';
 $load->add("Rabbit", realpath("vendor/rabbit/library"));
 
 // Registrando o Servico do Load
-Rabbit\Service\ServiceLocator::registerInstance("Rabbit\Load", $load);
+Rabbit\Service\ServiceLocator::registerInstance('Rabbit\Load', $load);
 
 // Cofnigurando Paths
 define("DS", DIRECTORY_SEPARATOR);

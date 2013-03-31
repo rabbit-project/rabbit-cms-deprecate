@@ -12,7 +12,7 @@ Application\Main\Literal2:
   module: application
   namespace: main
   controller: index
-  action: indexa
+  action: teste
 # -------
 Application\Main\Regex:
  type: 'Rabbit\Routing\Mapping\Regex'
@@ -33,7 +33,7 @@ Application\Main\Segment:
   module: application
   namespace: main
   controller: index
-  action: teste
+  action: testes
  options:
   requirements:
    usuario: '[a-z]'
@@ -48,7 +48,7 @@ Application\Main\Segment2:
   action: teste2
  options:
   requirements:
-   usuario: '[a-z]'
+   usuario: '[[:alpha:]]'
 # -------
 Application\Main\Segment3:
  type: 'Rabbit\Routing\Mapping\Segment'
@@ -57,7 +57,7 @@ Application\Main\Segment3:
   module: application
   namespace: main
   controller: index
-  action: teste2
+  action: teste3
  options:
   requirements:
    action: '[a-z]'

@@ -10,3 +10,4 @@ autoload.php
 !vendor/rabbit-project/*
 vendor
 /nbproject/private/
+.idea
