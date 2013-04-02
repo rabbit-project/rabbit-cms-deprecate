@@ -1,5 +1,5 @@
 <?php
-namespace Application\Main\Vo;
+namespace Application\Namespaces\Main\Vo;
 
 class GrupoVo {
 	

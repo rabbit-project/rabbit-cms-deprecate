@@ -1,5 +1,5 @@
 <?php
-namespace Application\Main\Controller;
+namespace Application\Namespaces\Main\Controller;
 
 use Rabbit\Service\ServiceLocator;
 
