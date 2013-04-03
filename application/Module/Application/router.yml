@@ -6,8 +6,9 @@ Application\Main\Literal:
   controller: index
   action: index
 # -------
-Application\Main\Literal2:
- url: '/teste'
+Application\Main\Segment222:
+ type: 'Rabbit\Routing\Mapping\Segment'
+ url: '/teste/'
  defaults:
   module: application
   namespace: main
@@ -16,7 +17,7 @@ Application\Main\Literal2:
 # -------
 Application\Main\Regex:
  type: 'Rabbit\Routing\Mapping\Regex'
- url: '/(?<controller>[^/]+)/'
+ url: '/(?<controller>[^/]+)/(?<action>[^/]+)'
  defaults:
   module: application
   namespace: main
@@ -61,4 +62,13 @@ Application\Main\Segment3:
  options:
   requirements:
    action: '[a-z]'
+# -------
+Application\Main\Regex4:
+ type: 'Rabbit\Routing\Mapping\Regex'
+ url: '/artigo/(?<id>\d+)/(?<title>[^\.]+)(?:\.(?<_format>[a-z]+))?'
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: artigo
 # -------

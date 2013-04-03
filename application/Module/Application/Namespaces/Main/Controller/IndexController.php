@@ -35,5 +35,13 @@ class IndexController extends AbstractController {
 			'accepts' => array('xml','html','json')
 		));
 	}
-	
+
+	public function artigoAction() {
+		echo sprintf('<pre>URLMap: %s<br />Titulo: %s<br />Id: %s<br />Formato: %s</pre>',
+			htmlentities(Application\Front::getInstance()->getRouter()->getMapped()->getUrlMap()),
+			$this->getRequest()->get('title'),
+			$this->getRequest()->get('id'),
+			$this->getRequest()->get('_format')
+		);
+	}
 }
