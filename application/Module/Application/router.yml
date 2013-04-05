@@ -1,5 +1,5 @@
 Application\Main\Literal:
- url: '/'
+ map: '/'
  defaults:
   module: application
   namespace: main
@@ -8,7 +8,7 @@ Application\Main\Literal:
 # -------
 Application\Main\Segment222:
  type: 'Rabbit\Routing\Mapping\Segment'
- url: '/teste/'
+ map: '/teste/'
  defaults:
   module: application
   namespace: main
@@ -17,7 +17,7 @@ Application\Main\Segment222:
 # -------
 Application\Main\Regex:
  type: 'Rabbit\Routing\Mapping\Regex'
- url: '/(?<controller>[^/]+)/(?<action>[^/]+)'
+ map: '/(?<controller>[^/]+)/(?<action>[^/]+)'
  defaults:
   module: application
   namespace: main
@@ -29,7 +29,7 @@ Application\Main\Regex:
 # -------
 Application\Main\Segment:
  type: 'Rabbit\Routing\Mapping\Segment'
- url: '/segment/:usuario'
+ map: '/segment/:usuario'
  defaults:
   module: application
   namespace: main
@@ -41,7 +41,7 @@ Application\Main\Segment:
 # -------
 Application\Main\Segment2:
  type: 'Rabbit\Routing\Mapping\Segment'
- url: '/segment2[/:usuario[/*]]'
+ map: '/segment2[/:usuario[/*]]'
  defaults:
   module: application
   namespace: main
@@ -53,7 +53,7 @@ Application\Main\Segment2:
 # -------
 Application\Main\Segment3:
  type: 'Rabbit\Routing\Mapping\Segment'
- url: '/:controller[/:action[/:teste[/*]]]'
+ map: '/:controller[/:action[/:teste[/*]]]'
  defaults:
   module: application
   namespace: main
@@ -65,7 +65,7 @@ Application\Main\Segment3:
 # -------
 Application\Main\Regex4:
  type: 'Rabbit\Routing\Mapping\Regex'
- url: '/artigo/(?<id>\d+)/(?<title>[^\.]+)(?:\.(?<_format>[a-z]+))?'
+ map: '/artigo/(?<id>\d+)/(?<title>[^\.]+)(?:\.(?<_format>[a-z]+))?'
  defaults:
   module: application
   namespace: main
