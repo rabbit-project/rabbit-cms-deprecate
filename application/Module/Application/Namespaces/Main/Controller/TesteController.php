@@ -1,9 +1,10 @@
 <?php
 namespace Application\Namespaces\Main\Controller;
 
+use Rabbit\Controller\Action;
 use Rabbit\Service\ServiceLocator;
 
-use Application\Main\Vo\UsuarioVo;
+use Application\Namespaces\Main\Vo\UsuarioVo;
 
 use Rabbit\View\View;
 
@@ -12,22 +13,23 @@ use Rabbit\Controller\AbstractController;
 class TesteController extends AbstractController {
 	
 	/** @var UsuarioVo */
-	private $myObjeto;
+	private $usuario;
 	
 	public function indexAction() {
-		return View::render(array("usuario"=>$this->myObjeto));
+		print_pre($this->usuario);
+		return Action::render(array("usuario"=>$this->usuario));
 	}
 	
 	public function resultAction() {
-		return View::render(array("usuario"=>$this->myObjeto));
+		return Action::render(array("usuario"=>$this->usuario));
 	}
 	
-	public function getMyObjeto() {
-		return $this->myObjeto;
+	public function getUsuario() {
+		return $this->usuario;
 	}
 	
-	public function setMyObjeto(UsuarioVo $usuario) {
-		$this->myObjeto = $usuario;
+	public function setUsuario(UsuarioVo $usuario) {
+		$this->usuario = $usuario;
 	}
 	
 }

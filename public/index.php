@@ -1,8 +1,4 @@
 <?php
-use Rabbit\Logger\LoggerType;
-
-use Rabbit\Logger\LoggerManager;
-
 chdir(dirname(__DIR__));
 
 require_once 'init.php';
