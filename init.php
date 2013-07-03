@@ -5,7 +5,7 @@ if (!file_exists('vendor/autoload.php'))
 
 /** @var $load \Composer\Autoload\ClassLoader */
 $load = include 'vendor/autoload.php';
-$load->add("Rabbit", realpath("vendor/rabbit/library"));
+//$load->add("Rabbit", realpath("vendor/rabbit/library"));
 
 // Registrando o Servico do Load
 Rabbit\Service\ServiceLocator::registerInstance('Rabbit\Load', $load);
