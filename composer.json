@@ -9,7 +9,7 @@
     },
     "require": {
     	"php": ">=5.3",
-        "rabbit-project/rabbit": "dev-develop"
+		"rabbit-project/rabbit": "1.0.*@dev"
     },
     "authors": [
         {
