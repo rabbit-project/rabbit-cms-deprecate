@@ -5,6 +5,7 @@ use Rabbit\Application;
 use Rabbit\Controller\AbstractController;
 use Rabbit\Controller\Action;
 use Rabbit\Logger\LoggerManager;
+use Rabbit\Logger\LoggerType;
 use Rabbit\View\View;
 
 class IndexController extends AbstractController {
@@ -15,11 +16,11 @@ class IndexController extends AbstractController {
 			array("nome"=>"Administrador"),
 		));
 		
-		/*try{
+		try{
 			throw new \Exception("Teste");
 		}catch (\Exception $e){
 			LoggerManager::getInstance()->getLogger(get_class())->log("Index Error", LoggerType::get("DEBUG"), $e);
-		}*/
+		}
 
 		View::getHelper('url');
 
