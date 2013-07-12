@@ -14,12 +14,6 @@ if (!file_exists('vendor/autoload.php'))
 /** @var $load \Composer\Autoload\ClassLoader */
 $load = include 'vendor/autoload.php';
 
-/*$load->add("Doctrine", array(
-	RABBIT_PATH . '/vendor/doctrine/orm/lib',
-	RABBIT_PATH . '/vendor/doctrine/dbal/lib',
-	RABBIT_PATH . '/vendor/doctrine/common/lib'
-));*/
-
 // Registrando o Servico do Load
 Rabbit\Service\ServiceLocator::registerInstance('Rabbit\Load', $load);
 
