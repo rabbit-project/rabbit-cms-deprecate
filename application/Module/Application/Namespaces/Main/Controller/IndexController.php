@@ -16,11 +16,11 @@ class IndexController extends AbstractController {
 			array("nome"=>"Administrador"),
 		));
 		
-		try{
+		/*try{
 			throw new \Exception("Teste");
 		}catch (\Exception $e){
 			LoggerManager::getInstance()->getLogger(get_class())->log("Index Error", LoggerType::get("DEBUG"), $e);
-		}
+		}*/
 
 		View::getHelper('url');
 

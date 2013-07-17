@@ -1,11 +1,16 @@
 <?php
 
 // Cofnigurando Paths
-define("DS", DIRECTORY_SEPARATOR);
-define("RABBIT_PATH", realpath(__DIR__));
-define("RABBIT_PATH_APPLICATION", RABBIT_PATH . DS . "application");
-define("RABBIT_PATH_MODULE", RABBIT_PATH_APPLICATION . DS . "module");
-define("RABBIT_PATH_CONFIG", RABBIT_PATH_APPLICATION . DS . "config");
+define('DS', DIRECTORY_SEPARATOR);
+define('RABBIT_PATH', realpath(__DIR__));
+define('RABBIT_PATH_APPLICATION', RABBIT_PATH . DS . 'application');
+define('RABBIT_PATH_MODULE', RABBIT_PATH_APPLICATION . DS . 'module');
+define('RABBIT_PATH_CONFIG', RABBIT_PATH_APPLICATION . DS . 'config');
+
+// Configurando Layout
+define('RABBIT_LAYOUT_THEMES_PATH', RABBIT_PATH . DS . 'public' . DS . 'themes');
+define('RABBIT_LAYOUT_THEME_DEFAULT', 'default');
+define('RABBIT_LAYOUT_HTML_COMMON_URI', RABBIT_PATH . DS . 'public' . DS . 'commons' . DS . 'layout.common.phtml');
 
 // Carregar o autoload
 if (!file_exists('vendor/autoload.php'))
@@ -21,11 +26,11 @@ Rabbit\Service\ServiceLocator::registerInstance('Rabbit\Load', $load);
  * Função de auxilio
  */ 
 function print_pre($var) {
-	echo "<pre><code>";
+	echo '<pre><code>';
 	if(is_string($var)){
 		echo htmlentities($var);
 	}else{
 		print_r($var);
 	}
-	echo "</code></pre>";
+	echo '</code></pre>';
 };

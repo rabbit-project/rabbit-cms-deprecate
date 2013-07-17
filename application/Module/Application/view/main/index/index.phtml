@@ -1,2 +1,9 @@
 Index PHTML IndexController<br />
 Testando helper <strong>$this->baseUrl('joao')</strong>: <br /> <?= $this->baseUrl('joao'); ?>
+<?php
+	$this->headLink($this->baseUrl('public/themes/default/style/default.css'), 'text/css', 'stylesheet');
+	$this->headLink($this->baseUrl('public/themes/default/style/default.css'), 'text/css', 'stylesheet');
+	$this->headScript()->appendScript('console.log(\'Ola Mundo\');');
+	$this->headScript()->prependScript('console.log(\'Ola Mundo Prep\');');
+	$this->headStyle()->appendStyle('body { background: red; }');
+?>
