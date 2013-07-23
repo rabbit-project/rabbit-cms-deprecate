@@ -5,3 +5,12 @@ Application\Main\Literal:
   namespace: main
   controller: index
   action: index
+#----
+Application\Main\AAAA:
+ type: 'Rabbit\Routing\Mapping\Segment'
+ map: '/:controller'
+ defaults:
+  module: application
+  namespace: main
+  controller: index
+  action: index

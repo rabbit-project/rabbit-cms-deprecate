@@ -19,10 +19,10 @@ class IndexController extends AbstractController {
 		/*try{
 			throw new \Exception("Teste");
 		}catch (\Exception $e){
-			LoggerManager::getInstance()->getLogger(get_class())->log("Index Error", LoggerType::get("DEBUG"), $e);
+			LoggerManager::getInstance()->getLogger(get_class())->log("Aqui deu um erro num sei porque", LoggerType::get("DEBUG"), $e);
 		}*/
 
-		View::getHelper('url');
+		View::getHelper('url', 'joao');
 
 		return Action::render($arr);
 	}

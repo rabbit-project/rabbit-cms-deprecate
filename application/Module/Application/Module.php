@@ -24,8 +24,10 @@ class Module {
 			'plugins' => array(
                 'Application\Plugin\MyPlugin'
             ),
-            'events' => array(
-                '' => array()
+            'listeners' => array(
+                'Rabbit\Event\Log\Register' => function($log){
+
+				}
             ),
 		);
 	}

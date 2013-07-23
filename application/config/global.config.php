@@ -9,7 +9,8 @@ return array(
 		'active' 	=> true,
 		'trace'  	=> true,
 		'export'	=> array(
-			'file'				=> RABBIT_PATH . '/temp/logger/rabbit-cms.log',
+			'filePath'			=> RABBIT_PATH_TEMP . DS . 'logger',
+			'fileName'			=> 'rabbit-cms.log',
 			'maxSizeRotation'	=> 1024 * 2, // a cada 2MB ele rotaciona o arquivo
 		)
 	),

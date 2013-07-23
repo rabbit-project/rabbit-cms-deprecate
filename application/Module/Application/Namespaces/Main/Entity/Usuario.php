@@ -1,64 +1,79 @@
 <?php
+
 namespace Application\Namespaces\Main\Entity;
-use Security\Namespaces\Main\Entity\Grupo;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class Usuario
- * @package Application\Namespaces\Main\Entity
- * @Entity @Table(name="usuario")
+ * Usuario
+ *
+ * @ORM\Table(name="usuario", uniqueConstraints={@ORM\UniqueConstraint(name="unique_id_usuario", columns={"id_usuario"}), @ORM\UniqueConstraint(name="unique_nome", columns={"nome"})}, indexes={@ORM\Index(name="fk_grupo", columns={"fk_grupo"})})
+ * @ORM\Entity
  */
-class Usuario {
+class Usuario
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_usuario", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
 
-	/** @Id @Column(type="integer",name="id_usuario") @GeneratedValue **/
-	private $id;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nome", type="string", length=255, nullable=false)
+     */
+    private $nome;
 
-	/** @Column(type="string") **/
-	private $nome;
+    /**
+     * @var \Application\Namespaces\Main\Entity\Grupo
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Namespaces\Main\Entity\Grupo")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fk_grupo", referencedColumnName="id_grupo")
+     * })
+     */
+    private $grupo;
 
 	/**
-	 * @OneToOne(targetEntity="Security\Namespaces\Main\Entity\Grupo")
-	 * @JoinColumn(name="fk_grupo", referencedColumnName="id_grupo")
-	 * @var Grupo
+	 * @param \Application\Namespaces\Main\Entity\Grupo $grupo
 	 */
-	private $grupo;
-
-	/**
-	 * @param Grupo $grupo
-	 */
-	public function setGrupo(Grupo $grupo) {
+	public function setGrupo($grupo) {
 		$this->grupo = $grupo;
 	}
 
 	/**
-	 * @return Grupo
+	 * @return \Application\Namespaces\Main\Entity\Grupo
 	 */
 	public function getGrupo() {
 		return $this->grupo;
 	}
 
 	/**
-	 * @param mixed $id
+	 * @param int $id
 	 */
 	public function setId($id) {
 		$this->id = $id;
 	}
 
 	/**
-	 * @return mixed
+	 * @return int
 	 */
 	public function getId() {
 		return $this->id;
 	}
 
 	/**
-	 * @param mixed $nome
+	 * @param string $nome
 	 */
 	public function setNome($nome) {
 		$this->nome = $nome;
 	}
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function getNome() {
 		return $this->nome;
