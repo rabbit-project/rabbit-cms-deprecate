@@ -9,5 +9,6 @@ autoload.php
 !vendor/rabbit-project
 !vendor/rabbit-project/*
 vendor
+temp
 /nbproject/private/
 .idea

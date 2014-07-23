@@ -1,6 +1,16 @@
 <?= $this->content ?><br />
+<p>Capturando Conteudo salvando na variavél <strong>foo</strong>:</p> 
+<pre>
+
+	<code>Layout Thema Default</code>
+
+</pre>
+
+
 <?php $this->placeholder('foo')->captureStart() ?>
 	Layout Thema Default:<br />
 <?php $this->placeholder('foo')->captureEnd(); ?>
-	Depois de capturar
+
+
+<p>Printando variável <strong>foo</strong>:</p>
 <?= $this->placeholder('foo'); ?>
