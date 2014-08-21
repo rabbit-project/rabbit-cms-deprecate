@@ -1,5 +1,5 @@
 <?php
-namespace Application\Namespaces\Main\Business;
+namespace Application\Business;
 
 class ApplicationBusiness {
 

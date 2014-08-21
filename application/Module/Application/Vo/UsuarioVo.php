@@ -1,5 +1,5 @@
 <?php
-namespace Application\Namespaces\Main\Vo;
+namespace Application\Vo;
 
 class UsuarioVo {
 	

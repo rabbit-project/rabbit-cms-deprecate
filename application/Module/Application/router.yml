@@ -1,16 +1,14 @@
-Application\Main\Literal:
+Application\Literal:
  map: '/'
  defaults:
   module: application
-  namespace: main
   controller: index
   action: index
 #----
-Application\Main\AAAA:
+Application\AAAA:
  type: 'Rabbit\Routing\Mapping\Segment'
  map: '/:controller'
  defaults:
   module: application
-  namespace: main
   controller: index
   action: index

@@ -1,7 +1,7 @@
 <?php
-namespace Security\Namespaces\Main\Controller;
+namespace Security\Controller;
 
-use Application\Namespaces\Main\Business\ApplicationBusiness;
+use Application\Business\ApplicationBusiness;
 use Rabbit\Acl\AclManager;
 use Rabbit\Acl\Actor;
 use Rabbit\Controller\AbstractController;

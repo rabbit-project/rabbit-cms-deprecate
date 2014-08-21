@@ -1,9 +1,9 @@
 <?php
-namespace Security\Namespaces\Main\Entity;
+namespace Security\Entity;
 
 /**
  * Class Grupo
- * @package Security\Namespaces\Main\Entity
+ * @package Security\Entity
  * @Entity @Table(name="grupo")
  */
 class Grupo {

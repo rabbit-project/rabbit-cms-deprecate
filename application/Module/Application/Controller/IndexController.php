@@ -1,5 +1,5 @@
 <?php
-namespace Application\Namespaces\Main\Controller;
+namespace Application\Controller;
 
 use Rabbit\Application;
 use Rabbit\Controller\AbstractController;

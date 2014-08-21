@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Namespaces\Main\Entity;
+namespace Application\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,9 +28,9 @@ class Usuario
     private $nome;
 
     /**
-     * @var \Application\Namespaces\Main\Entity\Grupo
+     * @var \Application\Entity\Grupo
      *
-     * @ORM\ManyToOne(targetEntity="Application\Namespaces\Main\Entity\Grupo")
+     * @ORM\ManyToOne(targetEntity="Application\Entity\Grupo")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="fk_grupo", referencedColumnName="id_grupo")
      * })
@@ -38,14 +38,14 @@ class Usuario
     private $grupo;
 
 	/**
-	 * @param \Application\Namespaces\Main\Entity\Grupo $grupo
+	 * @param \Application\Entity\Grupo $grupo
 	 */
 	public function setGrupo($grupo) {
 		$this->grupo = $grupo;
 	}
 
 	/**
-	 * @return \Application\Namespaces\Main\Entity\Grupo
+	 * @return \Application\Entity\Grupo
 	 */
 	public function getGrupo() {
 		return $this->grupo;
