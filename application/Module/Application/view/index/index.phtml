@@ -9,6 +9,6 @@ $this->headScript()->prependScript('console.log(\'Ola Mundo Prep\');');
 $this->headStyle()->appendStyle('html { background: rgb(250,250,250); }');
 ?>
 <br />
-Nome Traduzido: <?= $this->translator()->trans('name'); ?>
+Nome Traduzido: <?= $this->translator()->trans('name', array('%nome%'=>'Erick')); ?>
 <br />
 Idioma: <?= $this->translator()->getInstance()->getLocale(); ?>

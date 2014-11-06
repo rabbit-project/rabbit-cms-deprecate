@@ -6,11 +6,16 @@ use Rabbit\Controller\AbstractController;
 use Rabbit\Controller\Action;
 use Rabbit\Logger\LoggerManager;
 use Rabbit\Logger\LoggerType;
+use Rabbit\Application\Module;
 use Rabbit\View\View;
 
 class IndexController extends AbstractController {
 	
-	public function indexAction(){		
+	public function indexAction(){
+
+      /*  $module = new Module(new \SplFileInfo(RABBIT_PATH_MODULE . '\Application'));
+        print_pre($module->getName()); exit;*/
+
 		$arr = array("grupos"=>array(
 			array("nome"=>"Editor"),
 			array("nome"=>"Administrador"),
@@ -39,12 +44,13 @@ class IndexController extends AbstractController {
 	}
 
 	public function artigoAction() {
-		echo sprintf('<pre>URLMap: %s<br />Titulo: %s<br />Id: %s<br />Formato: %s</pre>',
+		$conteudo =  sprintf('<pre>URLMap: %s<br />Titulo: %s<br />Id: %s<br />Formato: %s</pre>',
 			htmlentities(Application\Front::getInstance()->getRouter()->getMapped()->getUrlMap()),
 			$this->getRequest()->get('title'),
 			$this->getRequest()->get('id'),
 			$this->getRequest()->get('_format')
 		);
+        return Action::render(array('conteudo'=>$conteudo));
 	}
 
 	public function forwardAction() {

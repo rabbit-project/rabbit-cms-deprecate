@@ -1,9 +1,11 @@
 <?php
 use Rabbit\Logger\LoggerType;
+use Rabbit\Application\EnvironmentType;
 
 return array(
+    'environment' 	=> EnvironmentType::get(EnvironmentType::DEVELOPER),
 	'loggerManager'	=> array(
-		'nivel'	 	=> LoggerType::get('RABBIT'),
+		'nivel'	 	=> LoggerType::get(LoggerType::RABBIT),
 		'active' 	=> true,
 		'trace'  	=> true,
 		'export'	=> array(

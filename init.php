@@ -35,3 +35,4 @@ function print_pre($var, $printType='print_r') {
 	$printType((is_string($var))? htmlentities($var) : $var);
 	echo sprintf('<pre><code>%s</code></pre>', ob_get_clean());
 };
+

@@ -2,10 +2,14 @@
 use Rabbit\Logger\LoggerType;
 
 return array(
-	'moduleDefault'	=> 'application',
+	'moduleDefault'	=> 'Application',
+    'modulesActivesDefault' => array(
+        'application',
+        'installer'
+    ),
 	'environment' 	=> 'production',
 	'loggerManager'	=> array(
-		'nivel'	 	=> LoggerType::get('DEBUG'),
+		'nivel'	 	=> LoggerType::get(LoggerType::RABBIT),
 		'active' 	=> true,
 		'trace'  	=> true,
 		'export'	=> array(
@@ -14,4 +18,8 @@ return array(
 			'maxSizeRotation'	=> 1024 * 2, // a cada 2MB ele rotaciona o arquivo
 		)
 	),
+    'session' => array(
+        'name' => 'Rabbit\Session',
+        'lifetime' => 60
+    )
 );

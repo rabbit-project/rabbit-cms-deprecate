@@ -5,10 +5,20 @@ Application\Literal:
   controller: index
   action: index
 #----
-Application\AAAA:
+#Application\AAAA:
+# type: 'Rabbit\Routing\Mapping\Segment'
+# map: '/:controller'
+# defaults:
+#  module: application
+#  controller: index
+#  action: index
+#---
+Application\ArtigoTeste:
  type: 'Rabbit\Routing\Mapping\Segment'
- map: '/:controller'
+ map: '/artigo/:id/:title.:_format'
+ options:
+  prioridade: 10
  defaults:
   module: application
   controller: index
-  action: index
+  action: artigo

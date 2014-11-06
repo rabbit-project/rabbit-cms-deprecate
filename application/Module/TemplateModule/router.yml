@@ -1,0 +1,3 @@
+# info: https://github.com/rabbit-project/rabbit/blob/develop/docs/Routers.md
+TemplateModuleRouter\Literal:
+ map: '/template-module'
