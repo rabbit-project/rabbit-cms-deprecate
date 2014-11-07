@@ -56,7 +56,7 @@ class IndexController extends AbstractController {
 
 O Controller na tradução purista seria um `controlador` resposavel por receber requisições e controlar os dados indo no Model para verificar as regras de negocio, acesso ao banco e indo no View para renderizar um conteúdo. O controller existe baseando no conceito HMVC "Hierarchical Model View Controller" mais informação: http://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller com isso podemos chamar outros modulos dentro dos nosso proprio modulo assim desacoplando ainda mais as funcionalidades e tornando modulos reutilizavéis para outros módulos caso necessário.
 
-O Controller no Rabbit fica percisa ser salvo dentro da pasta Controller como vimos já na introdução. Todo controller deve ter o nome de seu arquivo .php o mesmo nome da classe utilizando-se do `CamelCase` em seu nome se seu controler tem mais de 1 nome como por exemplo "Usuario Perfil" então seu arquivo ficara: "UsuarioPerfilController.php" e o nome da classe gerada dentro do arquivo será chamada de "class UsuarioPerfilController".
+O Controller no Rabbit fica precisa ser salvo dentro da pasta Controller como vimos já na introdução. Todo controller deve ter o nome de seu arquivo .php o mesmo nome da classe utilizando-se do `CamelCase` em seu nome se seu controler tem mais de 1 nome como por exemplo "Usuario Perfil" então seu arquivo ficara: "UsuarioPerfilController.php" e o nome da classe gerada dentro do arquivo será chamada de "class UsuarioPerfilController".
 
 
 ##### Namespace
