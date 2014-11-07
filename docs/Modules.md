@@ -1,7 +1,5 @@
 ## Criando Módulos para o CMS ##
 
-\teste
-
 ###Introdução
 
 Para se criar os módulos para o CMS é simples basta seguir a seguinte estrutura da pasta do modulo:
